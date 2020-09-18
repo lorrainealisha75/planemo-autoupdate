@@ -23,8 +23,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: webfactory/ssh-agent@v0.4.0
       with:
-        #ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        #repo-token: ${{ secrets.GITHUB_TOKEN }}
     # Decrypt github credentials into .planemo/yml
     - name: Decrypt secret
       run: bash decrypt_credentials.sh
