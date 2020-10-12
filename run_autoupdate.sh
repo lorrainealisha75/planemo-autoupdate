@@ -5,9 +5,9 @@ virtualenv .au
 source .au/bin/activate
 
 #Install latest hub
-echo "Install hub"
-brew install hub
-echo "hub install successful"
+#echo "Install hub"
+#brew install hub
+#echo "hub install successful"
 
 # pip install conda
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
@@ -18,8 +18,11 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
-planemo clone --skip_fork --branch planemo-pr-`date +%F-%H-%m` git@github.com:simonbray/galaxytools
+planemo clone --skip_fork --branch planemo-pr-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
 echo "Cloning successful"
+git remote add upstream git@github.com:simonbray/galaxytools
+echo "Adding upstream"
+git pull upstream master
 cd galaxytools/
 echo "Folder is:"
 pwd
