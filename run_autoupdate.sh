@@ -22,7 +22,6 @@ planemo clone --skip_fork --branch planemo-pr-`date +%F-%H-%m` git@github.com:lo
 echo "Cloning successful"
 git remote add upstream git@github.com:simonbray/galaxytools
 echo "Adding upstream"
-git pull origin master
 cd galaxytools/
 echo "Folder is:"
 pwd
