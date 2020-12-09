@@ -6,6 +6,7 @@ source .au/bin/activate
 
 # pip install conda
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
+echo "installing planemo"
 pip install -e planemo
 planemo --help
 
