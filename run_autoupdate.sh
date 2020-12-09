@@ -19,7 +19,7 @@ pwd
 planemo clone --skip_fork --branch planemo-1 git@github.com:lorrainealisha75/galaxytools
 echo "Cloning successful"
 git remote add upstream git@github.com:lorrainealisha75/galaxytools
-cd galaxytools/
+#cd galaxytools/
 echo "Folder after cloning is:"
 pwd
 echo "Commit"
