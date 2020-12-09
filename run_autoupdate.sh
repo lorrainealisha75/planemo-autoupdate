@@ -13,7 +13,7 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
-~/.planemo.yml
+vim ~/.planemo.yml
 echo "Folder before cloning is:"
 pwd
 #planemo clone --skip_fork --branch planemo-pr11-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
