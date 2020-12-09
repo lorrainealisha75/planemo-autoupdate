@@ -16,7 +16,7 @@ git config --global user.name "Lorraine Coelho"
 echo "Folder before clonning is:"
 pwd
 #planemo clone --skip_fork --branch planemo-pr11-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
-planemo clone --skip-fork --branch planemo-1 git@github.com:simonbray/duck
+planemo clone --skip_fork --branch planemo-1 git@github.com:simonbray/duck
 echo "Cloning successful"
 git remote add upstream git@github.com:simonbray/duck
 cd duck/
