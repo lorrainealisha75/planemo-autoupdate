@@ -13,7 +13,8 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
-echo "Folder before clonning is:"
+ls /home/
+echo "Folder before cloning is:"
 pwd
 #planemo clone --skip_fork --branch planemo-pr11-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
 planemo clone --fork --branch planemo-1 git@github.com:simonbray/duck
