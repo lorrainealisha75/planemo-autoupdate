@@ -14,6 +14,14 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
+
+# Configure .planemo/yml file
+echo "github.com:" >> $HOME/.planemo.yml
+echo "	- user: $GITHUB_USERNAME" >> $HOME/.planemo.yml
+echo "	  oauth_token: $GITHUB_TOKEN" >> $HOME/.planemo.yml
+
+cat $HOME/.planemo.yml
+
 cat $HOME/.planemo.yml
 echo "Folder before cloning is:"
 pwd
