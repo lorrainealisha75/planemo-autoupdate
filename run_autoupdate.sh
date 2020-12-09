@@ -28,5 +28,5 @@ echo "Push"
 #git push -u origin planemo-pr11-`date +%F-%H-%m`
 git push -u origin planemo-1
 echo "Create pull request"
-git request-pull upstream tool_wrappers
+git request-pull git@github.com:lorrainealisha75/galaxytools tool_wrappers
 #planemo pull_request upstream
