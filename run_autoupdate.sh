@@ -21,3 +21,11 @@ planemo --help
 # git credentials
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
+
+# Clone repo
+gh repo clone git@github.com:simonbray/duck
+cd duck/
+echo "Cloning successful"
+
+
+
