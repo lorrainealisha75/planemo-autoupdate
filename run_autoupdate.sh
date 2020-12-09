@@ -16,7 +16,7 @@ git config --global user.name "Lorraine Coelho"
 #planemo clone --skip_fork --branch planemo-pr11-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
 planemo clone --skip_fork --branch planemo-1 git@github.com:lorrainealisha75/galaxytools
 echo "Cloning successful"
-git remote add upstream git@github.com:simonbray/galaxytools
+git remote add upstream git@github.com:lorrainealisha75/galaxytools
 cd galaxytools/
 echo "Folder is:"
 pwd
@@ -26,4 +26,4 @@ echo "Push"
 #git push -u origin planemo-pr11-`date +%F-%H-%m`
 git push -u origin planemo-1
 echo "Create pull request"
-planemo pull_request -m "planemo test pr 11" upstream
+planemo pull_request upstream
