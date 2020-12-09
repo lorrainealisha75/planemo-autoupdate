@@ -30,3 +30,8 @@ jobs:
       run: bash run_autoupdate.sh
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    container:
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.ghcr_token }}
