@@ -22,10 +22,10 @@ pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # in
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
-# Fork and clone repo
-gh repo fork simonbray/duck --clone --remote
+# Clone repo
+gh repo clone git@github.com:simonbray/duck
 cd duck/
-echo "Fork and clone successful"
+gh repo fork --remote=false --clone=false
 
 #Create an empty commit
 #git commit --allow-empty -m 'New test commit from planemo'
