@@ -14,18 +14,21 @@ sudo apt install gh
 
 # pip install conda
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
-echo "installing planemo"
-pip install -e planemo
-planemo --help
+#echo "installing planemo"
+#pip install -e planemo
+#planemo --help
 
 # git credentials
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
-# Clone repo
-gh repo clone git@github.com:simonbray/duck
+# Fork and clone repo
+gh repo fork git@github.com:simonbray/duck --clone --remote
 cd duck/
-echo "Cloning successful"
+echo "Fork and clone successful"
+
+#Create an empty commit
+#git commit --allow-empty -m 'New test commit from planemo'
 
 
 
