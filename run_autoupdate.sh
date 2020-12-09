@@ -1,4 +1,4 @@
-echo "Starting autoupdate...."
+echo "Starting autoupdate..."
 pip3 install wheel
 sudo pip3 install virtualenv
 virtualenv .au
