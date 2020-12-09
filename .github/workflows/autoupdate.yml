@@ -24,7 +24,7 @@ jobs:
     - uses: webfactory/ssh-agent@v0.4.1
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - uses: actions/cli@v1.3.1
+    - uses: cli/cli@v1.3.1
       with:
         credentials: ${{secrets.GIT_CREDENTIALS}}   
     # Runs a single command using the runners shell
