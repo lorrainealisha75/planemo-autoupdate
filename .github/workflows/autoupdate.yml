@@ -9,8 +9,6 @@ on:
   - cron: "0 4 * * *"
   push:
     branches: [ master ]
-  watch:
-    types: [ started ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
