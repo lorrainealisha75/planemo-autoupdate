@@ -19,7 +19,7 @@ pwd
 planemo clone --skip_fork --branch planemo-1 git@github.com:lorrainealisha75/galaxytools
 echo "Cloning successful"
 git remote add upstream git@github.com:lorrainealisha75/galaxytools
-#cd galaxytools/
+cd galaxytools/
 echo "Folder after cloning is:"
 pwd
 echo "Commit"
@@ -28,4 +28,5 @@ echo "Push"
 #git push -u origin planemo-pr11-`date +%F-%H-%m`
 git push -u origin planemo-1
 echo "Create pull request"
-planemo pull_request upstream
+git request-pull upstream tool_wrappers
+#planemo pull_request upstream
