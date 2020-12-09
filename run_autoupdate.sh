@@ -24,9 +24,10 @@ echo "	  oauth_token: $GITHUB_TOKEN" >> $HOME/.planemo.yml
 echo "Folder before cloning is:"
 pwd
 #planemo clone --skip_fork --branch planemo-pr11-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
-planemo clone --branch planemo-1 git@github.com:simonbray/duck
+planemo clone --fork --branch planemo-1 git@github.com:simonbray/duck
 echo "Cloning successful"
-git remote add upstream git@github.com:lorrainealisha75/duck.git
+git remote rename origin upstream
+git remote add origin git@github.com:lorrainealisha75/duck.git
 cd duck/
 echo "Folder after cloning is:"
 pwd
