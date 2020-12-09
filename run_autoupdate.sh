@@ -6,14 +6,14 @@ source .au/bin/activate
 
 # pip install conda
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
-pip install -e planemo/
+pip install -e planemo
 planemo --help
 
 # git credentials
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
-ls $HOME/
+cat $HOME/.planemo.yml
 echo "Folder before cloning is:"
 pwd
 #planemo clone --skip_fork --branch planemo-pr11-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
