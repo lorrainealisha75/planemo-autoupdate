@@ -23,7 +23,7 @@ git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
 # Fork and clone repo
-gh repo fork git@github.com:simonbray/duck --clone --remote
+gh repo fork simonbray/duck --clone --remote
 cd duck/
 echo "Fork and clone successful"
 
