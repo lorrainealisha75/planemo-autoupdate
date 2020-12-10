@@ -58,3 +58,7 @@ jobs:
         cd duck/
         echo "Fork and clone successful"
 
+        # Adding upstream
+        echo "Adding remote upstream..."
+        git remote add origin git@github.com:lorrainealisha75/duck.git
+
