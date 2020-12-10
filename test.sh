@@ -8,4 +8,6 @@ source .au/bin/activate
 git config user.email "lorrainealisha75@gmail.com"
 git config user.name "Lorraine Coelho"
 
-echo "https:/lorrainealisha75:@github.com/abc.git"$GITHUB_TOKEN
+
+abc="https:/lorrainealisha75"
+echo $abc:$GITHUB_TOKEN"@github.com/abc.git"
