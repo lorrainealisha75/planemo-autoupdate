@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/standardiser-feedstock --clone --remote
+        gh repo fork simonbray/LSTM_Chem --clone --remote
 
-        cd standardiser-feedstock/
+        cd LSTM_Chem/
 
         echo "Fork and clone successful"
 
@@ -63,7 +63,7 @@ jobs:
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/$GITHUB_ACTOR/standardiser-feedstock.git master
+        git push https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/$GITHUB_ACTOR/LSTM_Chem.git master
 
         echo "Creating a PR..."
         gh pr create --title "ABC" --bod "XYZ" --repo simonbray/standardiser-feedstock
