@@ -34,7 +34,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: bash run_autoupdate.sh
-      #env:
-        #SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
