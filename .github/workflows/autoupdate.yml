@@ -46,8 +46,4 @@ jobs:
 
         echo ${{ secrets.PAT }} > token.txt
         cat token.txt
-
-        echo ${{ secrets.GITHUB_CREDENTIALS }}
-
-
-
+        echo "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$INPUT_REPO.git"
