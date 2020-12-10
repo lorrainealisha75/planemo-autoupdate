@@ -41,8 +41,8 @@ jobs:
         source .au/bin/activate
 
         # git credentials
-        #git config --global user.email "lorrainealisha75@gmail.com"
-        #git config --global user.name "Lorraine Coelho"
+        git config --global user.email "lorrainealisha75@gmail.com"
+        git config --global user.name "Lorraine Coelho"
 
         #gh config set GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
 
