@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo "Starting autoupdate..."
 pip3 install wheel
 sudo pip3 install virtualenv
@@ -10,4 +8,4 @@ source .au/bin/activate
 git config user.email "lorrainealisha75@gmail.com"
 git config user.name "Lorraine Coelho"
 
-echo "https://${{github.actor}}:$GITHUB_TOKEN@github.com/abc.git"
+echo "https://lorrainealisha75:"$GITHUB_TOKEN"@github.com/abc.git"
