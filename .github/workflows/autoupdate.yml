@@ -45,5 +45,5 @@ jobs:
         git config --global user.name "Lorraine Coelho"
 
         echo ${{ secrets.PAT }} > token.txt
-        echo {{$GITHUB_ACTOR}}
-        echo {{$GITHUB_TOKEN}}
+        ech $GITHUB_ACTOR
+        echo {{secrets.$GITHUB_TOKEN}}
