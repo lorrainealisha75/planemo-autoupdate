@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/FastPCA --clone --remote
+        gh repo fork simonbray/tiny-editor --clone --remote
 
-        cd FastPCA/
+        cd tiny-editor/
         git remote -v
 
         #echo "Setting remote..."
@@ -68,5 +68,5 @@ jobs:
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
         echo "Pushing..."
-        #git push -u "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$INPUT_REPO.git" master
-        git push -u origin master
+        git push -u "https://lorrainealisha75:{{ secrets.$GITHUB_TOKEN }}@github.com/tiny-editor.git" master
+        #git push -u origin master
