@@ -48,7 +48,7 @@ jobs:
         cat token.txt
 
         # Authenticate
-        echo "Authenticating...."
+        echo "Authenticating..."
         gh auth login --with-token < token.txt
 
         # Fork and clone repo
