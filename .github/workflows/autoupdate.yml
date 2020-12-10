@@ -42,7 +42,7 @@ jobs:
 
         # git credentials
         git config --global user.email "lorrainealisha75@gmail.com"
-        git config --global user.name "Lorraine Coelho"
+        git config --global user.name $GITHUB_ACTOR
 
         echo ${{ secrets.PAT }} > token.txt
 
@@ -52,20 +52,16 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/staged-recipes --clone --remote
+        gh repo fork simonbray/htmd-paper-sm --clone --remote
 
-        cd staged-recipes/
-        git remote -v
-
-        #echo "Setting remote..."
-        #git reomte rm origin
-        #git remote add origin git@github.com:lorrainealisha75/rdock.git
+        cd htmd-paper-sm/
 
         echo "Fork and clone successful"
-        git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_ACTOR/staged-recipes.git
+        #git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_ACTOR/staged-recipes.git
+
         # Commit
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push #https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/infrastructure-playbook.git master
+        git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/$GITHUB_ACTOR/htmd-paper-sm.git master
