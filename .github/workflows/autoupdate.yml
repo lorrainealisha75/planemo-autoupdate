@@ -53,11 +53,10 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/download_store --clone --remote
+        gh repo fork simonbray/mordred-feedstock --clone --remote
 
-        cd download_store/
-        pwd
-        ls
+        cd mordred-feedstock/
+        echo ${{ secrets.GITHUB_CREDENTIAL }}
         git remote -v
         #echo "Setting remote..."
         #git reomte rm origin
