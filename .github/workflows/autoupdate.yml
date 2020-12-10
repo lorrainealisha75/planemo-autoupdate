@@ -44,4 +44,4 @@ jobs:
         git config --global user.email "lorrainealisha75@gmail.com"
         git config --global user.name "Lorraine Coelho"
 
-        echo https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/galaxy-tools-compchem.git
+        echo https://${{ GITHUB_ACTOR }}:${{ GITHUB_TOKEN }}@github.com/galaxy-tools-compchem.git
