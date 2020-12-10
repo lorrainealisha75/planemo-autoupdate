@@ -68,4 +68,4 @@ jobs:
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push 'https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/IntaRNA.git' master
+        git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/IntaRNA.git master
