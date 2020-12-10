@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/IntaRNA --clone --remote
+        gh repo fork simonbray/galaxy-test-data --clone --remote
 
-        cd IntaRNA/
+        cd galaxy-test-data/
         git remote -v
 
         #echo "Setting remote..."
@@ -68,4 +68,4 @@ jobs:
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/IntaRNA.git master
+        git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/galaxy-test-data.git master
