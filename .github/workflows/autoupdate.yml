@@ -53,10 +53,11 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/dcTMD --clone --remote
+        gh repo fork simonbray/GGL --clone --remote
 
         #cd chemTS/
         pwd
+        ls
 
         #echo "Setting remote..."
         #git reomte rm origin
@@ -69,5 +70,5 @@ jobs:
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
         echo "Pushing..."
-        git push -u origin master
+        git push -u upstream master
 
