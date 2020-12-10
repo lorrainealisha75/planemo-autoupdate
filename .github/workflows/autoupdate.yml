@@ -46,9 +46,12 @@ jobs:
 
         #gh config set GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
 
+        echo ${{ secrets.GITHUB_TOKEN }} > token.txt
+        cat token.txt
+
         # Authenticate
         echo "Authenticating..."
-        gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+        gh auth login --with-token < token.txt
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
