@@ -41,10 +41,36 @@ jobs:
         source .au/bin/activate
 
         # git credentials
-        git config --global user.email "lorrainealisha75@gmail.com"
-        git config --global user.name "Lorraine Coelho"
+        git config user.email "lorrainealisha75@gmail.com"
+        git config user.name "Lorraine Coelho"
 
         echo ${{ secrets.PAT }} > token.txt
-        #echo $GITHUB_ACTOR
-        #echo ${{secrets.GITHUB_TOKEN}}
-        echo "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/dl4chem-geometry.git"
+        #echo "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/dl4chem-geometry.git"
+
+        # Authenticate
+        echo "Authenticating...."
+        gh auth login --with-token < token.txt
+
+        # Fork and clone repo
+        echo "Begin forking and cloning..."
+        gh repo fork simonbray/dl4chem-geometry --clone --remote
+
+        cd dl4chem-geometry/
+        git remote -v
+
+        #echo "Setting remote..."
+        #git reomte rm origin
+        #git remote add origin git@github.com:lorrainealisha75/rdock.git
+
+      
+        echo "Fork and clone successful"
+
+        # Commit
+        echo "Committing..."
+        git commit --allow-empty -m 'New test commit from planemo'
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: master
