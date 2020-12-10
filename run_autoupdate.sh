@@ -8,6 +8,10 @@ source .au/bin/activate
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
+
+# Authenticate
+gh auth login --with-token < $GITHUB_TOKEN
+
 # Fork and clone repo
 echo "Begin forking and cloning..."
 gh repo fork simonbray/duck --clone --remote
