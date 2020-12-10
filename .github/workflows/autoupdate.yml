@@ -53,12 +53,12 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/duck --clone --remote
+        gh repo fork simonbray/gxwf --clone --remote
 
-        cd duck/
+        cd gxwf/
         echo "Fork and clone successful"
 
         # Adding upstream
         echo "Adding remote upstream..."
-        git remote add upstream git@github.com:lorrainealisha75/duck.git
+        git remote add upstream git@github.com:lorrainealisha75/gxwf.git
 
