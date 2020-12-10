@@ -52,11 +52,11 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/tools-devteam --clone --remote
+        gh repo fork simonbray/FastPCA --clone --remote
 
-        cd tools-devteam/
-        echo ${{ secrets.GITHUB_CREDENTIAL }}
+        cd FastPCA/
         git remote -v
+
         #echo "Setting remote..."
         #git reomte rm origin
         #git remote add origin git@github.com:lorrainealisha75/rdock.git
@@ -68,4 +68,5 @@ jobs:
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
         echo "Pushing..."
-        git push -u "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$INPUT_REPO.git" master
+        #git push -u "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$INPUT_REPO.git" master
+        git push -u origin master
