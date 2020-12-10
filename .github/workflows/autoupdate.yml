@@ -53,9 +53,10 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/bioblend --clone --remote
+        gh repo fork simonbray/standards --clone
+        git remote add upstream git@github.com:lorrainealisha75/standards.git
 
-        cd bioblend/
+        cd standards/
         echo "Fork and clone successful"
 
         # Commit
