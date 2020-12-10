@@ -44,4 +44,28 @@ jobs:
         git config --global user.email "lorrainealisha75@gmail.com"
         git config --global user.name "Lorraine Coelho"
 
-        echo https://${{ github.actor }}:${{ github.token }}@github.com/galaxy-tools-compchem.git
+        echo ${{ secrets.PAT }} > token.txt
+
+        # Authenticate
+        echo "Authenticating..."
+        gh auth login --with-token < token.txt
+
+        # Fork and clone repo
+        echo "Begin forking and cloning..."
+        gh repo fork simonbray/infrastructure-playbook --clone --remote
+
+        cd infrastructure-playbook/
+        git remote -v
+
+        #echo "Setting remote..."
+        #git reomte rm origin
+        #git remote add origin git@github.com:lorrainealisha75/rdock.git
+
+        echo "Fork and clone successful"
+
+        # Commit
+        echo "Committing..."
+        git commit --allow-empty -m 'New test commit from planemo'
+
+        echo "Pushing..."
+        git push #https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/infrastructure-playbook.git master
