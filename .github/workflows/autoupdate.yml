@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/gxadmin --clone --remote
+        gh repo fork simonbray/galaxy-tools-compchem --clone --remote
 
-        cd gxadmin/
+        cd galaxy-tools-compchem/
         git remote -v
 
         #echo "Setting remote..."
@@ -68,4 +68,4 @@ jobs:
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/gxadmin.git master
+        git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/galaxy-tools-compchem.git master
