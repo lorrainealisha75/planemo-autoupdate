@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/test-files --clone --remote
+        gh repo fork simonbray/dl4chem-geometry --clone --remote
 
-        cd test-files/
+        cd dl4chem-geometry/
         git remote -v
 
         #echo "Setting remote..."
@@ -68,5 +68,5 @@ jobs:
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
         echo "Pushing..."
-        git push -u "https://{{github.actor}}:{{github.token}}@github.com/test-files.git" master
+        git push -u "https://{{github.actor}}:{{github.token}}@github.com/dl4chem-geometry.git" master
         #git push -u origin master
