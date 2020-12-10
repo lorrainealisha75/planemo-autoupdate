@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Starting autoupdate..."
 pip3 install wheel
 sudo pip3 install virtualenv
