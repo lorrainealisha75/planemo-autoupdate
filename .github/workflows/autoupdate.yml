@@ -53,15 +53,18 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/standards --clone
-        git remote add upstream git@github.com:lorrainealisha75/standards.git
+        gh repo fork simonbray/clust --clone
+        
+        git reomte rm origin
+        git remote add origin git@github.com:lorrainealisha75/clust.git
 
-        cd standards/
+        cd clust/
+        pwd
         echo "Fork and clone successful"
 
         # Commit
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
         echo "Pushing..."
-        git push -u upstream master
+        git push -u origin master
 
