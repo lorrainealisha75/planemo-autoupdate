@@ -53,12 +53,13 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/clust --clone
-        
-        git reomte rm origin
-        git remote add origin git@github.com:lorrainealisha75/clust.git
+        gh repo fork simonbray/ambertools --clone
 
-        cd clust/
+        echo "Setting remote..."
+        git reomte rm origin
+        git remote add origin git@github.com:lorrainealisha75/ambertools.git
+
+        cd ambertools/
         pwd
         echo "Fork and clone successful"
 
