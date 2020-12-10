@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/bioblend-cookbook --clone --remote
+        gh repo fork simonbray/usegalaxy-eu-tools --clone --remote
 
-        cd bioblend-cookbook/
+        cd usegalaxy-eu-tools/
         git remote -v
 
         #echo "Setting remote..."
@@ -62,7 +62,7 @@ jobs:
         #git remote add origin git@github.com:lorrainealisha75/rdock.git
 
         echo "Fork and clone successful"
-        git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/bioblend-cookbook.git
+        git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_ACTOR/usegalaxy-eu-tools.git
         # Commit
         echo "Committing..."
         git commit --allow-empty -m 'New test commit from planemo'
