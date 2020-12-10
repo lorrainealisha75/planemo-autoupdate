@@ -44,12 +44,12 @@ jobs:
         git config user.email "lorrainealisha75@gmail.com"
         git config user.name "Lorraine Coelho"
 
-        echo ${{ secrets.PAT }} >> token.txt
+        echo ${{ secrets.PAT }} > token.txt
         #echo "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/moldyn-galaxy.git"
 
         # Authenticate
-        echo "Authenticating...."
-        gh auth login --with-token << token.txt
+        echo "Authenticating..."
+        gh auth login --with-token < token.txt
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
