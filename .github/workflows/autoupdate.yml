@@ -53,9 +53,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/chemTS --clone --remote
+        gh repo fork simonbray/dcTMD --clone --remote
 
-        cd chemTS/
+        #cd chemTS/
         pwd
 
         #echo "Setting remote..."
