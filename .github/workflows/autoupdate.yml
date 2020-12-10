@@ -33,8 +33,6 @@ jobs:
         sudo apt install gh
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo "Starting autoupdate..."
         pip3 install wheel
@@ -52,7 +50,7 @@ jobs:
         # Authenticate
         echo "Authenticating..."
         gh auth login --with-token < token.txt
-        
+
         # Fork and clone repo
         echo "Begin forking and cloning..."
         gh repo fork simonbray/duck --clone --remote
