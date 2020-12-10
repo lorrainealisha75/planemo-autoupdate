@@ -46,4 +46,4 @@ jobs:
 
         echo ${{ secrets.PAT }} > token.txt
         echo $GITHUB_ACTOR
-        echo {{secrets.$GITHUB_TOKEN}}
+        echo ${{secrets.GITHUB_TOKEN}}
