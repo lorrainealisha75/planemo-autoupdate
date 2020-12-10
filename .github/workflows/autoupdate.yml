@@ -60,5 +60,5 @@ jobs:
 
         # Adding upstream
         echo "Adding remote upstream..."
-        git remote add origin git@github.com:lorrainealisha75/duck.git
+        git remote add upstream git@github.com:lorrainealisha75/duck.git
 
