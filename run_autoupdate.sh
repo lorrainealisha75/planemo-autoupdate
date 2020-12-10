@@ -10,7 +10,7 @@ git config --global user.name "Lorraine Coelho"
 
 
 # Authenticate
-gh auth login --with-token < $GITHUB_TOKEN
+gh auth login --with-token $GITHUB_TOKEN
 
 # Fork and clone repo
 echo "Begin forking and cloning..."
