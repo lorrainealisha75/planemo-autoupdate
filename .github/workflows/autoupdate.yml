@@ -45,28 +45,5 @@ jobs:
         git config --global user.name "Lorraine Coelho"
 
         echo ${{ secrets.PAT }} > token.txt
-
-        # Authenticate
-        echo "Authenticating...."
-        gh auth login --with-token < token.txt
-
-        # Fork and clone repo
-        echo "Begin forking and cloning..."
-        gh repo fork simonbray/dl4chem-geometry --clone --remote
-
-        cd dl4chem-geometry/
-        git remote -v
-
-        #echo "Setting remote..."
-        #git reomte rm origin
-        #git remote add origin git@github.com:lorrainealisha75/rdock.git
-
-      
-        echo "Fork and clone successful"
-
-        # Commit
-        echo "Committing..."
-        git commit --allow-empty -m 'New test commit from planemo'
-        echo "Pushing..."
-        git push -u "https://{{github.actor}}:{{github.token}}@github.com/dl4chem-geometry.git" master
-        #git push -u origin master
+        echo {{github.actor}}
+        echo {{github.token}}
