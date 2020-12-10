@@ -9,6 +9,7 @@ git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 
 # Fork and clone repo
+echo "Begin forking and cloning..."
 gh repo fork simonbray/duck --clone --remote
 cd duck/
 echo "Fork and clone successful"
