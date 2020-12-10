@@ -44,11 +44,11 @@ jobs:
         #git config --global user.email "lorrainealisha75@gmail.com"
         #git config --global user.name "Lorraine Coelho"
 
-        gh config set GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
+        #gh config set GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
 
         # Authenticate
         echo "Authenticating..."
-        gh auth login --with-token GITHUB_TOKEN
+        gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
