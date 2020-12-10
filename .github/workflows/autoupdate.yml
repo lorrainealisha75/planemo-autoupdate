@@ -47,8 +47,9 @@ jobs:
         # Fork and clone repo
         echo "Begin forking and cloning..."
         gh repo fork simonbray/duck --clone --remote
-        
+
         # Authenticate
+        echo "Authenticating..."
         gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
 
         cd duck/
