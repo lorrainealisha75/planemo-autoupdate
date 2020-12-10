@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/htmd-paper-sm --clone --remote
+        gh repo fork simonbray/Langevin_T_boost --clone --remote
 
-        cd htmd-paper-sm/
+        cd Langevin_T_boost/
 
         echo "Fork and clone successful"
         #git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_ACTOR/staged-recipes.git
@@ -64,4 +64,4 @@ jobs:
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push https://"$GITHUB_ACTOR":"$GITHUB_TOKEN"@github.com/$GITHUB_ACTOR/htmd-paper-sm.git master
+        git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_ACTOR/Langevin_T_boost.git master
