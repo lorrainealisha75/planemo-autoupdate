@@ -44,9 +44,7 @@ jobs:
         git config --global user.email "lorrainealisha75@gmail.com"
         git config --global user.name "Lorraine Coelho"
 
-        #gh config set GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
-
-        echo ${{ secrets.GITHUB_TOKEN }} > token.txt
+        echo ${{ secrets.GITHUB_CREDENTIALS }} > token.txt
         cat token.txt
 
         # Fork and clone repo
