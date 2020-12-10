@@ -33,8 +33,7 @@ jobs:
         sudo apt install gh
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: |
-        ./test.sh
+      run: bash test.sh
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
