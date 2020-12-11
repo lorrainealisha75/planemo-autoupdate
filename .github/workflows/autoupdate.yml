@@ -52,9 +52,9 @@ jobs:
 
         # Fork and clone repo
         echo "Begin forking and cloning..."
-        gh repo fork simonbray/pcba-pdb-codes --clone --remote
+        gh repo fork simonbray/SARS-CoV-2 --clone --remote
 
-        cd pcba-pdb-codes/
+        cd SARS-CoV-2/
 
         echo "Fork and clone successful"
 
@@ -63,7 +63,7 @@ jobs:
         git commit --allow-empty -m 'New test commit from planemo'
 
         echo "Pushing..."
-        git push https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/$GITHUB_ACTOR/pcba-pdb-codes.git master
+        git push https://$GITHUB_ACTOR:${{ secrets.PAT }}@github.com/$GITHUB_ACTOR/SARS-CoV-2.git master
 
         echo "Creating a PR..."
-        gh pr create --title "ABC" --body "XYZ" --repo simonbray/pcba-pdb-codes
+        gh pr create --title "ABC" --body "XYZ" --repo simonbray/SARS-CoV-2
