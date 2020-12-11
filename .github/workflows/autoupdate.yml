@@ -35,9 +35,8 @@ jobs:
         sudo apt update
         sudo apt install gh
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v3
-      with:
-          token: ${{ secrets.PAT }}
-          push-to-fork: simonbray/galaxytools
+      run: |
+        echo "Creating a PR..."
+        gh pr create --title "ABC" --body "XYZ" --repo simonbray/galaxytools
 
 
